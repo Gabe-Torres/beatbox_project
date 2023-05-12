@@ -1,8 +1,11 @@
 class Node
 
     def initialize(string)
-        @string = "plop"
+        @string = @string
 
     end
 
+    def data
+        @string = "plop"
+    end
 end
