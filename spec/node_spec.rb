@@ -1,4 +1,4 @@
-require "../lib/node"
+require "./lib/node"
 require "pry"
 
 RSpec.describe Node do
