@@ -8,4 +8,8 @@ class Node
     def data
         @string = "plop"
     end
+
+    def next_node 
+        nil
+    end
 end
