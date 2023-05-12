@@ -4,4 +4,7 @@ class Linked_list
         @head = head
     end
 
+    def append(doop)
+        "doop"
+    end
 end
