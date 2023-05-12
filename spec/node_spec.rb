@@ -10,7 +10,7 @@ RSpec.describe Node do
     
     it 'has data' do
         node = Node.new("plop")
-        
+    
         expect(node.data).to eq("plop")
     end
 
