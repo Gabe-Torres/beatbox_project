@@ -1,6 +1,7 @@
 class Linked_list
 
-    def initialize()
-        
+    def initialize(head = nil)
+        @head = head
     end
+
 end

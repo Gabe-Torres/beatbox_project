@@ -4,5 +4,9 @@ require "pry"
 
 RSpec.describe Linked_list do
     it 'exist' do
+        list = Linked_list.new
+        head = nil 
+
+        expect(list).to be_instance_of(Linked_list)
     end
 end 
