@@ -1,10 +1,10 @@
 class Linked_list
-
-    def initialize(head=nil)
-        @head = head
+attr_reader :head
+    def initialize
+        @head = nil
     end
 
-    # def append(value)
+    # def append(data)
     #   if @head == nil 
     #        @head = Node.new("doop", nil)
     #   else 
