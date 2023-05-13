@@ -21,9 +21,10 @@ class LinkedList
         end
         count
     end
-    
-    def to_string
 
+    def to_string
+        @head.data
     end
+
 
 end
