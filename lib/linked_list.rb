@@ -21,8 +21,9 @@ class LinkedList
         end
         count
     end
+    
+    def to_string
 
-    # def to_string
-#     node = 
-    # end
+    end
+
 end

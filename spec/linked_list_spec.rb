@@ -30,11 +30,11 @@ RSpec.describe LinkedList do
         expect(list.count).to eq(1)
     end
 
-    # it 'changes to a string' do
-    #     list = LinkedList.new
-    #      list.append("doop")
+    it 'changes to a string' do
+        list = LinkedList.new
+        list.append("doop")
 
-    #     expect(list.append("doop")).to eq("doop")
-    #     expect(list.to_s).to eq("doop")
-    # end
+        expect(list.append("doop")).to eq("doop")
+        expect(list.to_string).to eq("doop")
+    end
 end 
