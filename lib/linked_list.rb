@@ -20,6 +20,9 @@ class LinkedList
     end
 
     def count 
+        if @head = 1 
+            1
+        end
         #return 1 for number of nodes
     end
     
