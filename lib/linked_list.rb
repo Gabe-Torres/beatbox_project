@@ -25,5 +25,8 @@ class LinkedList
         end
         #return 1 for number of nodes
     end
-    
+
+    def to_string
+        
+    end
 end

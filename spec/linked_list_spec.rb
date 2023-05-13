@@ -27,4 +27,11 @@ RSpec.describe LinkedList do
 
         expect(list.count).to eq(1)
     end
+
+    it 'changes to a string' do
+        list = LinkedList.new
+
+        
+        expect(list.head.to_string).to eq("doop")
+    end
 end 
