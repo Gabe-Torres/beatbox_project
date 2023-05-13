@@ -5,11 +5,15 @@ require "pry"
 RSpec.describe Linked_list do
     it 'exist' do
         list = Linked_list.new
-        head = nil 
 
         expect(list).to be_instance_of(Linked_list)
     end
 
+    it 'has a head that is nil by default' do
+        list = Linked_list.new
+
+        expect(list.head).to eq(nil)
+    end
     # it 'appends' do
     #     list = Linked_list.new
     #     head = nil 
