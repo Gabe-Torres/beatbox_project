@@ -19,8 +19,8 @@ class LinkedList
     #   end
     end
 
-    def count
-        
+    def count 
+        #return 1 for number of nodes
     end
     
 end
