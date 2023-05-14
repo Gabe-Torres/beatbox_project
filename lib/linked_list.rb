@@ -10,7 +10,7 @@ class LinkedList
             @head = Node.new(data)
         else
             current_node = @head
-            while current_node.next_node != nil
+            until current_node.next_node == nil
                 current_node = current_node.next_node
         end
         current_node.next_node = Node.new(data)
@@ -29,6 +29,13 @@ class LinkedList
     end
 
     def to_string
-        @head.data
+        # @head.data
+        current_node = @head
+        beat_box_beats = ''
+        until current_node == nil
+            beat_box_beats << current_node.data + " "
+            current_node = current_node.next_node
+        end
+        beat_box_beats.rstrip
     end
 end

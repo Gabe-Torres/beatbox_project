@@ -60,7 +60,7 @@ RSpec.describe LinkedList do
         expect(list.count).to eq(2)
     end
 
-    it 'returns strings for list' do
+    it 'returns strings as list' do
         list = LinkedList.new
         list.append("doop")
         list.append("deep")
