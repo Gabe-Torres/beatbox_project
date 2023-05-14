@@ -1,6 +1,7 @@
 # Node class was create and initialized. With two instance variables
 # The next_node instance variable is set to nil by default. 
-# Data is passed as the initial argument of the Node class.
+# Data is passed as the initial argument of the Node class. And @data will
+# retrieve the value within data.
 class Node
     attr_accessor :next_node
     attr_reader :data
@@ -18,7 +19,7 @@ class Node
     # def data
     #     @string = "plop"
     # end
-    
+
     # def next_node 
     #     nil
     # end
