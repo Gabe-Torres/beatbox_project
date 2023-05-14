@@ -90,12 +90,15 @@ RSpec.describe LinkedList do
 
         expect(list.to_string).to eq("doop deep")
     end
-
+# Iteration patter: Test for the prepend method. List becomes an instance of the linkedlist class.
+# The append method is then being called on list and adding two new nodes through thr data argument. list.append("plop") & ("suu")
+# it is expected that the prepend method will equal dop.
+# it is expected the to_string method will then equal "dop plop suu". This method places dop in front of the other two nodes.
     it 'prepends nodes' do
         list = LinkedList.new 
         list.append("plop")
         list.append("suu")
-        
+
         expect(list.prepend("dop")).to eq("dop")
         expect(list.to_string).to eq("dop plop suu")
     end

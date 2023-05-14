@@ -59,7 +59,10 @@ class LinkedList
         end
         beat_box_beats.join(' ')
     end
-
+#   Defining the prepend method here. And passing data as an argument. The data will be added to
+#   the linked list. The if statement runs and checks if the head is nil. If so then the @head = Node.new(data) becomes the new head of the list.
+#   else the current_node is assigned as a new node.new(data) then current_node.next_node is assigned to @head. Them @head is assigned as a new node through current_node. 
+#   The data is then returned.
     def prepend(data)
         if @head == nil 
             @head = Node.new(data)
