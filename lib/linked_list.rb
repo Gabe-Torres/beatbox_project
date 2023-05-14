@@ -24,7 +24,7 @@ class LinkedList
                 current_node = current_node.next_node
         end
         current_node.next_node = Node.new(data)
-    end
+        end
     data
     end
 # Defining the count method here, the current_node is assigned to the @head
@@ -48,15 +48,26 @@ class LinkedList
 # linked_list. During the looping the data is retrieved and stored with current_node and shoveled into the 
 # empty string beat_box_beats. With an added space so the data can be separated. Current_node is then assigned to next_node so the loop can
 # retrieve the other data aka nodes. Then beat_box_beats is then returned as a string.
-#rstrip removes the spaces that gathered from, + ' '. 
+#rstrip removes the spaces that gathered from, + ' '. edited for shorter could and used join method to change the now array to string
     def to_string
         # @head.data
         current_node = @head
-        beat_box_beats = ''
+        beat_box_beats = []
         until current_node == nil
-            beat_box_beats << current_node.data + ' '
+            beat_box_beats << current_node.data
             current_node = current_node.next_node
         end
-        beat_box_beats.rstrip
+        beat_box_beats.join(' ')
+    end
+
+    def prepend(data)
+        if @head == nil 
+            @head = Node.new(data)
+        else
+            current_node = Node.new(data)
+            current_node.next_node = @head
+            @head = current_node
+        end
+        data
     end
 end

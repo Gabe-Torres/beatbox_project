@@ -91,4 +91,12 @@ RSpec.describe LinkedList do
         expect(list.to_string).to eq("doop deep")
     end
 
+    it 'prepends nodes' do
+        list = LinkedList.new 
+        list.append("plop")
+        list.append("suu")
+        
+        expect(list.prepend("dop")).to eq("dop")
+        expect(list.to_string).to eq("dop plop suu")
+    end
 end 
