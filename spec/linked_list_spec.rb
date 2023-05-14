@@ -17,19 +17,19 @@ RSpec.describe LinkedList do
 
     it 'appends' do
         list = LinkedList.new
-        list.append("doop")
+        # list.append("doop")
         
-        # expect(list.append("doop")).to eq("doop")
+        expect(list.append("doop")).to eq("doop")
         expect(list.head.data).to eq("doop")
         expect(list.head.next_node).to eq(nil)
     end
 
     it 'counts' do
         list = LinkedList.new
-        list.append("doop")
+        # list.append("doop")
         
         # expect(list.head.next_node).to eq(nil)
-        # expect(list.append("doop")).to eq("doop")
+        expect(list.append("doop")).to eq("doop")
         expect(list.count).to eq(1)
     end
 
@@ -44,10 +44,12 @@ RSpec.describe LinkedList do
     it 'appends more nodes' do
         list = LinkedList.new
         list.append("doop")
-        list.append("deep")
+        # list.append("deep")
         
-        # expect(list.append("deep")).to eq("deep")
+        expect(list.append("deep")).to eq("deep")
         expect(list.head.data).to eq("doop")
         expect(list.head.next_node.data).to eq("deep")
+        expect(list.head.next_node.next_node).to eq(nil)
     end
+
 end 
