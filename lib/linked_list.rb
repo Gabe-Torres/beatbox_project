@@ -6,7 +6,7 @@ class LinkedList
     end
 
     def append(data)
-        if @head == nil 
+        if @head.nil? 
             @head = Node.new(data)
         else
             current_node = @head
