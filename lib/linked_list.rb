@@ -33,7 +33,7 @@ class LinkedList
         current_node = @head
         beat_box_beats = ''
         until current_node == nil
-            beat_box_beats << current_node.data + " "
+            beat_box_beats << current_node.data + ' '
             current_node = current_node.next_node
         end
         beat_box_beats.rstrip
