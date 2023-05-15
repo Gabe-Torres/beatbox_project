@@ -76,13 +76,25 @@ class LinkedList
 
     def insert(index,data)
         current_node = @head
-        (index -1).times do
-            raise "not long enough" if current_node == nil?
+        (index - 1).times do
             current_node = current_node.next_node
         end
         new_node = Node.new(data)
         new_node.next_node = current_node.next_node
         current_node.next_node = new_node
         data
+    end
+#   Defining the find method. it takes two parameters. index and a return_number. 
+#   It then returns a string of what was asked in the parameter. An array is made that is 
+#   beat_box_beats. it then splits to_string and assigns it to words. 
+#   new_index is then assigned as the sum of the index position and the return number, that parameters. 
+#   followed by a minus one, which accounts for the last index. the words variable aka the to_string split is then shoveled into beat_box_beats array
+#   starting at the index position to the new_index or the index-return_number. The array is then joined back into a string using join.
+    def find(index,return_number)
+        beat_box_beats = []
+        words = to_string.split
+        new_index = index + return_number - 1
+        beat_box_beats << words[index..new_index]
+        beat_box_beats.join(' ')
     end
 end
