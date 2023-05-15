@@ -73,4 +73,16 @@ class LinkedList
         end
         data
     end
+
+    def insert(index,data)
+        current_node = @head
+        (index -1).times do
+            raise "not long enough" if current_node == nil?
+            current_node = current_node.next_node
+        end
+        new_node = Node.new(data)
+        new_node.next_node = current_node.next_node
+        current_node.next_node = new_node
+        data
+    end
 end
