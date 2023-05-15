@@ -125,4 +125,32 @@ RSpec.describe LinkedList do
         expect(list.find(1, 3)).to eq("woo shi shu")
         expect(list.to_string).to eq("deep woo shi shu blop")
     end
+
+    it 'has an include method' do
+        list = LinkedList.new
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+
+        expect(list.include?("deep")).to eq(true)
+        expect(list.include?("dep")).to eq(false)
+        expect(list.to_string).to eq("deep woo shi shu blop")
+    end
+    
+    it 'has a pop method' do 
+        list = LinkedList.new
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+        # list.pop 
+        # list.pop
+
+        expect(list.pop).to eq("blop")
+        expect(list.pop).to eq("shu")
+        expect(list.to_string).to eq("deep woo shi")
+    end
 end 

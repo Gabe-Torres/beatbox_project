@@ -3,7 +3,6 @@
 # @head will act as the start of the linked list. Once again, placing head in a getter
 # method so it can be retrievable outside the class. 
 class LinkedList
-
     attr_reader :head
     def initialize
         @head = nil
@@ -96,5 +95,26 @@ class LinkedList
         new_index = index + return_number - 1
         beat_box_beats << words[index..new_index]
         beat_box_beats.join(' ')
+    end
+
+    def include?(data)
+        string = self.to_string
+        string.include?(data)
+    end
+
+    def pop
+        if @head.nil?
+            @head
+        elsif @head.next_node.nil?
+        self.head = nil
+            @head
+        else
+        current_node = @head
+        current_node = current_node.next_node until current_node.next_node.next_node.nil?
+        
+        popped_node = current_node.next_node
+        current_node.next_node = nil
+            popped_node.data
+        end
     end
 end
