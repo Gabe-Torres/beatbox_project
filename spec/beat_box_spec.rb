@@ -14,7 +14,7 @@ RSpec.describe BeatBox do
 
     it 'appends' do
         bb = BeatBox.new
-
+    
         expect(bb.append("deep doo ditt")).to eq("deep doo ditt")
         expect(bb.list.head.data).to eq("deep")
         expect(bb.list.head.next_node.data).to eq("doo")
@@ -29,4 +29,14 @@ RSpec.describe BeatBox do
         expect(bb.prepend("kit kat")).to eq("kit kat")
         expect(bb.count).to eq(5)
     end  
+
+    it 'appends more nodes' do
+        bb = BeatBox.new 
+
+        expect(bb.append("deep doo ditt woo hoo shu")).to eq("deep doo ditt woo hoo shu")
+        expect(bb.count).to eq(6)
+        expect(bb.list.count).to eq(6)
+    end
+
+    
 end
