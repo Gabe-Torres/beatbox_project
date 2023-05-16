@@ -6,13 +6,27 @@ require "pry"
 RSpec.describe BeatBox do 
     it 'exist' do 
         bb = BeatBox.new
-        list = LinkedList.new 
 
-
-        expect(list.head).to eq(nil)
         expect(bb).to be_instance_of(BeatBox)
-        expect(list).to be_instance_of(LinkedList)
+        expect(bb.list.head).to eq(nil)
+        expect(bb.list).to be_instance_of(LinkedList)
     end
 
-    
+    it 'appends' do
+        bb = BeatBox.new
+
+        expect(bb.append("deep doo ditt")).to eq("deep doo ditt")
+        expect(bb.list.head.data).to eq("deep")
+        expect(bb.list.head.next_node.data).to eq("doo")
+        expect(bb.append("woo hoo shu")).to eq("woo hoo shu")
+        expect(bb.count).to eq(6)
+    end
+
+    it 'prepends' do
+        bb = BeatBox.new
+        bb.append("deep do ditt")
+
+        expect(bb.prepend("kit kat")).to eq("kit kat")
+        expect(bb.count).to eq(5)
+    end  
 end
