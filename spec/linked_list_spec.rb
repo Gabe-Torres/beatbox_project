@@ -25,7 +25,7 @@ RSpec.describe LinkedList do
 # equal doop since that is the only data gathered so far. It is expected that list.head.next_node is equal to nil since there is only one node.
     it 'appends' do
         list = LinkedList.new
-        # list.append("doop")
+        
         
         expect(list.append("doop")).to eq("doop")
         expect(list.head.data).to eq("doop")
@@ -146,8 +146,7 @@ RSpec.describe LinkedList do
         list.append("shi")
         list.append("shu")
         list.append("blop")
-        # list.pop 
-        # list.pop
+        
         expect(list.to_string).to eq("deep woo shi shu blop")
         expect(list.pop).to eq("blop")
         expect(list.pop).to eq("shu")

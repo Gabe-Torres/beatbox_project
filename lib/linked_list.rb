@@ -50,7 +50,6 @@ class LinkedList
 # retrieve the other data aka nodes. Then beat_box_beats is then returned as a string.
 #rstrip removes the spaces that gathered from, + ' '. edited for shorter could and used join method to change the now array to string
     def to_string
-        # @head.data
         current_node = @head
         beat_box_beats = []
         until current_node == nil
@@ -76,9 +75,7 @@ class LinkedList
 
     def insert(index,data)
         current_node = @head
-        # (index - 1).times do
-        #     current_node = current_node.next_node
-        # end
+        
         new_node = Node.new(data)
         new_node.next_node = current_node.next_node
         current_node.next_node = new_node
