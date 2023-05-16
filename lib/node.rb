@@ -16,11 +16,4 @@ class Node
     # is the right way to go. This allows me to access the instance variables
     # outside the class. 
 
-    # def data
-    #     @string = "plop"
-    # end
-
-    # def next_node 
-    #     nil
-    # end
 end
