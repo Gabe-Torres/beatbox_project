@@ -26,6 +26,6 @@ class BeatBox
     end
 
     def play
-        `say -r 200 -v Boing "deep doo ditt woo hoo shu"`
+        `say -r 250 -v Boing "deep doo ditt woo hoo shu"`
     end
 end
