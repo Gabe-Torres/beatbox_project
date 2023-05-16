@@ -38,5 +38,9 @@ RSpec.describe BeatBox do
         expect(bb.list.count).to eq(6)
     end
 
-    
+    it 'plays' do
+        bb = BeatBox.new 
+
+        expect(bb.play).to eq(`say -r 200 -v Boing "deep doo ditt woo hoo shu"`)
+    end
 end

@@ -24,4 +24,8 @@ class BeatBox
     def count
         list.count
     end
+
+    def play
+        `say -r 200 -v Boing "deep doo ditt woo hoo shu"`
+    end
 end
