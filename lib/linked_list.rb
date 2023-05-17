@@ -22,7 +22,7 @@ class LinkedList
             current_node = @head
             until current_node.next_node == nil
                 current_node = current_node.next_node
-        end
+            end
         current_node.next_node = Node.new(data)
         end
     data
