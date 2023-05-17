@@ -72,7 +72,11 @@ class LinkedList
         end
         data
     end
-
+#node is assigned to the @head
+#new node is assigned as a new node.new(data)
+#the new nodes next node is assigned to the currents node next node
+#currents node.next node is assigned to the new node=node.new(data)
+#data is returned
     def insert(index,data)
         current_node = @head
         
@@ -99,7 +103,11 @@ class LinkedList
         string = to_string
         string.include?(data)
     end
-
+#if head is nil then head is now the start
+#checks amount of nodes in list. if one head is nil because it is the only node and cant pop
+#if not then iteration through list until second to last node. and sets the following node to nil to remove
+#data is returned out of the loop code block
+#
     def pop
         if @head.nil?
             @head
